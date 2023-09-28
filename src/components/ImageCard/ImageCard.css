@@ -1,0 +1,17 @@
+.section-homes__items__img {
+  max-width: 296px;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .section-homes__items__img {
+    max-width: 328px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .section-homes__items__img {
+    max-width: 328px;
+  }
+}
