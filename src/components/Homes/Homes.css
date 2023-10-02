@@ -1,0 +1,23 @@
+.section-homes {
+  position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* For tablet: */
+  .section-homes {
+    max-width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .section-homes {
+    max-width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-height: 100%;
+  }
+}
