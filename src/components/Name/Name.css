@@ -1,0 +1,27 @@
+.section-homes__hotel-name {
+  color: var(--accent-blue);
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.16;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* For tablet: */
+  .section-homes__hotel-name {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    margin-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .section-homes__hotel-name {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    margin-top: 8px;
+  }
+}
