@@ -7,7 +7,7 @@ import {Btn} from "../Btn";
 
 
  export const Form = () => {
-   const [city, setCity] = useState("")
+   const [city, setCity] = useState('')
 
    const handleChange = (event)=>{
      setCity(event.target.value);
@@ -15,7 +15,7 @@ import {Btn} from "../Btn";
    }
    const handleClick = (event) => {
      event.preventDefault()
-     const result = data.filter(item => item === city);
+     const result = data.filter(item => item.city.toLowerCase() === city.toLowerCase());
      console.log(result);
    };
 
