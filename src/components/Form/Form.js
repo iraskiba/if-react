@@ -3,11 +3,14 @@ import './Form.css'
 import {Input} from "../Input";
 import {data} from "../Mock/Mock";
 import {Btn} from "../Btn";
+import {AvailableHotels} from "../AvailableHotels";
 
 
-
- export const Form = () => {
+export const Form = () => {
    const [city, setCity] = useState('')
+
+   const [showHotels, setShowHotels] = useState([]);
+
 
    const handleChange = (event)=>{
      setCity(event.target.value);
@@ -16,6 +19,8 @@ import {Btn} from "../Btn";
    const handleClick = (event) => {
      event.preventDefault()
      const result = data.filter(item => item.city.toLowerCase() === city.toLowerCase());
+
+     setShowHotels(result);
      console.log(result);
    };
 
@@ -47,7 +52,7 @@ import {Btn} from "../Btn";
            <label className="_label" htmlFor="rooms-span">Room</label>
          </div>
        </div>
-<Btn onSubmit={handleClick}/>
+<Btn onSubmit={handleClick} />
      </form>
    </div>
    )

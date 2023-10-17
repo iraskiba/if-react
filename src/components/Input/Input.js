@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './Input.css'
 
 
-export const Input = ({city, handleChange}) =>{
+export const Input = ({ handleChange}) =>{
 
 
   return(
@@ -13,7 +13,7 @@ export const Input = ({city, handleChange}) =>{
     </label>
     <input onChange={handleChange}
       className="form-section__city-element--city-form"
-           value={city}
+           defaultValue="New York"
            type="text"
            id="city"/>
   </div>
