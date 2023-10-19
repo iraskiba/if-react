@@ -6,9 +6,9 @@ import {Btn} from "../Btn";
 import {AvailableHotels} from "../AvailableHotels";
 
 
+
 export const Form = () => {
    const [city, setCity] = useState('')
-
    const [showHotels, setShowHotels] = useState([]);
 
 
@@ -19,15 +19,14 @@ export const Form = () => {
    const handleClick = (event) => {
      event.preventDefault()
      const result = data.filter(item => item.city.toLowerCase() === city.toLowerCase());
-
      setShowHotels(result);
      console.log(result);
    };
 
    return(
-   <div className="form-section ">
+   <div className="form-section " >
      <form onSubmit={handleClick}>
-       <Input city={city} handleChange={handleChange}/>
+       <Input value={city} handleChange={handleChange}/>
        <div className="form-section__date-element">
          <label className="form-section__date-element--date__label" htmlFor="date">Check-in — Check-out</label>
          <input className="form-section__date-element--date__form"
@@ -54,7 +53,10 @@ export const Form = () => {
        </div>
 <Btn onSubmit={handleClick} />
      </form>
+     <AvailableHotels result={showHotels} />
+
    </div>
+
    )
  };
 

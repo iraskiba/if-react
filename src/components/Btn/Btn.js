@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+
 import './Btn.css'
 
 
-export const Btn =({handleClick, showHotels, result}) => {
+export const Btn =({handleClick}) => {
 
   return (
     <button  type="submit"  onSubmit={handleClick} id="button-search" className="form-section__button-element">Search

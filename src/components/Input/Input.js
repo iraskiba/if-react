@@ -1,10 +1,8 @@
-import React, {useState} from "react";
+
 import './Input.css'
 
 
 export const Input = ({ handleChange}) =>{
-
-
   return(
 
   <div className="form-section__city-element">
