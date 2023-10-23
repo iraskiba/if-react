@@ -2,7 +2,7 @@
 import './Input.css'
 
 
-export const Input = ({ handleChange}) =>{
+export const Input = ({handleChange}) =>{
   return(
 
   <div className="form-section__city-element">

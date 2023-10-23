@@ -11,19 +11,23 @@ import {data} from "../Mock/Mock";
 import {AvailableHotels} from "../AvailableHotels";
 
 
-
+console.log(data)
 export const App = () => {
   const [city, setCity] = useState('')
   const [showHotels, setShowHotels] = useState([]);
-
+  console.log(data)
   const handleChange = (event)=>{
+    event.preventDefault()
     setCity(event.target.value);
+    console.log(data)
   }
   const handleClick = (event) => {
     event.preventDefault()
     const result = data.filter(item => item.city.toLowerCase() === city.toLowerCase());
     setShowHotels(result);
     console.log(result);
+    console.log(data)
+    console.log(result)
   };
 
   return (
@@ -33,10 +37,10 @@ export const App = () => {
       </>
       <TopSection>
         <Wrapper>
-          <Form city={city} setCity={setCity} handleChange={handleChange} handleClick={handleClick}/>
+          <Form setShowHotels={setShowHotels} city={city} handleChange={handleChange} handleClick={handleClick}/>
         </Wrapper>
       </TopSection>
-
+      <AvailableHotels result={showHotels}/>
       <Title/>
    <Contentbox/>
 </div>
