@@ -1,27 +1,16 @@
 import React, {useState} from "react";
 import './Form.css'
 import {Input} from "../Input";
-import {data} from "../Mock/Mock";
 import {Btn} from "../Btn";
-import {AvailableHotels} from "../AvailableHotels";
+import {data} from "../Mock/Mock";
 
 
 
-export const Form = () => {
-   const [city, setCity] = useState('')
-   const [showHotels, setShowHotels] = useState([]);
+
+export const Form = ({handleClick,setCity, city,handleChange }) => {
 
 
-   const handleChange = (event)=>{
-     setCity(event.target.value);
 
-   }
-   const handleClick = (event) => {
-     event.preventDefault()
-     const result = data.filter(item => item.city.toLowerCase() === city.toLowerCase());
-     setShowHotels(result);
-     console.log(result);
-   };
 
    return(
    <div className="form-section " >
@@ -53,7 +42,7 @@ export const Form = () => {
        </div>
 <Btn onSubmit={handleClick} />
      </form>
-     <AvailableHotels result={showHotels} />
+
 
    </div>
 

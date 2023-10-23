@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+
 import './AvailableHotels.css';
 import {Wrapper} from "../Wrapper";
 
