@@ -1,8 +1,8 @@
-
+import React from "react";
 import './Input.css'
 
 
-export const Input = ({handleChange}) =>{
+export const Input = ({inputCity, handleChange}) =>{
   return(
 
   <div className="form-section__city-element">
@@ -11,7 +11,7 @@ export const Input = ({handleChange}) =>{
     </label>
     <input onChange={handleChange}
       className="form-section__city-element--city-form"
-           defaultValue="New York"
+          value={inputCity}
            type="text"
            id="city"/>
   </div>

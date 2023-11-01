@@ -2,14 +2,30 @@
 import './Form.css'
 import {Input} from "../Input";
 import {Btn} from "../Btn";
+import {data} from '../Mock';
+import {useState} from "react";
+import {filtred} from '../Mock/filterH'
 
 
-export const Form = ({ city,handleChange,handleClick,setShowHotels,setCity}) => {
+
+export const Form = ({setCity}) => {
+  const [inputCity, setInputCity] = useState([])
+  const handleChange = (event) => {
+    setCity(event.target.value);
+  }
+
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    const filter = filtred(data, inputCity);
+    setCity(filter)
+    setInputCity('')
+  }
 
    return(
    <div className="form-section " >
      <form onSubmit={handleClick} >
-       <Input value={city} handleChange={handleChange} setCity={setCity}/>
+       <Input onChange={handleChange} value={inputCity}/>
        <div className="form-section__date-element">
          <label className="form-section__date-element--date__label" htmlFor="date">Check-in — Check-out</label>
          <input className="form-section__date-element--date__form"
@@ -34,7 +50,7 @@ export const Form = ({ city,handleChange,handleClick,setShowHotels,setCity}) => 
            <label className="_label" htmlFor="rooms-span">Room</label>
          </div>
        </div>
-<Btn onSubmit={handleClick} />
+<Btn />
 
      </form>
 
