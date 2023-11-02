@@ -5,12 +5,12 @@ import {Title} from "../Title";
 import {Sprite} from "../Sprite";
 import {TopSection} from "../TopSection";
 import React, {useState} from "react";
-import {data} from '../Mock'
 import {AvailableHotels} from "../AvailableHotels";
 
 
+
 export const App = () => {
-  const [city, setCity] = useState(data.slice(0,4))
+  const [city, setCity] = useState([])
 
   return (
     <div>

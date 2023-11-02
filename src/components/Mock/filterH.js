@@ -3,6 +3,7 @@ export const filtred = (arr, string) => {
     const nameT = name.toLowerCase()
     const cityT = city.toLowerCase()
    const countryT = country.toLowerCase();
+
     return (
       nameT.includes(string) ||
       cityT.includes(string)||
@@ -11,3 +12,4 @@ export const filtred = (arr, string) => {
   });
   return hotels;
 }
+
