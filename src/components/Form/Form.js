@@ -17,8 +17,6 @@ export const Form = ({setCity}) => {
 
   const handleClick = (event) => {
     event.preventDefault()
-    console.log('ira')
-    console.log(inputCity)
     let filter = filtred(data, inputCity);
     setCity(filter)
     setInputCity('')
