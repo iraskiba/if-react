@@ -1,0 +1,8 @@
+.top-section {
+  min-height: 100vh;
+  max-width: 1440px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 51px 104px 120px;
+}

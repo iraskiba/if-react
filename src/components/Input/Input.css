@@ -1,0 +1,28 @@
+.form-section__city-element--city-label {
+  display: block;
+  margin-bottom: 46px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.17;
+  position: absolute;
+  bottom: 64%;
+  left: 1.9%;
+  border: none;
+  color: var(--white);
+  outline: none;
+  width: 37%;
+}
+
+.form-section__city-element--city-form {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.17;
+  margin-left: 24px;
+  margin-top: 22px;
+  padding: 2px;
+  margin-bottom: 21px;
+  color: var(--text-color-main);
+  background-color: var(--stroke-main);
+}

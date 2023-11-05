@@ -1,0 +1,9 @@
+.top-section__logo  {
+  box-sizing: border-box;
+  padding-bottom: 6px;
+}
+
+.top-section__logo-svg {
+  height: 40px;
+  width: 205px;
+}

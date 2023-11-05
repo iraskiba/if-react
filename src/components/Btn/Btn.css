@@ -1,0 +1,17 @@
+.form-section__button-element {
+  box-sizing: border-box;
+  border: none;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  text-align: center;
+  background-color: var(--accent-blue);
+  border-radius: 8px;
+  width: 15.6%;
+  position: absolute;
+  min-height: 64px;
+  left: 85%;
+  bottom: -5%;
+  cursor: pointer;
+}
