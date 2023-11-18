@@ -10,6 +10,8 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export const Form = ()=> {
   const [date,setDate]=useState(new Date())
+  const [date2,setDate2]=useState(new Date())
+
   const {GetHotels} = useContext(MyContext)
   const [inputCity, setInputCity] = useState('');
 
@@ -29,18 +31,33 @@ export const Form = ()=> {
     <div className="form-section">
       <form onSubmit={handleClick}>
         <Input onChange={handleChange} htmlFor="city" value={inputCity} name="city" id="city"/>
+
+
+
         <div className="form-section__date-element">
           <label className="form-section__date-element--date__label" htmlFor="date">Check-in — Check-out</label>
           <div className="form-section__date-element--date__form">
             <DatePicker className="datePicker"
                         selected={date}
                        onChange={(date) => setDate(date)}
-                        monthsShown={2}
+                        monthsShown={1}
                         id="date"
                         />
+            <div >
+              <DatePicker className="datePicker"
+                          selected={date2}
+                          onChange={(date2) => setDate2(date2)}
+                          monthsShown={1}
+                          id="date2"
+              />
+          </div>
           </div>
 
+
         </div>
+
+
+
         <div id="counter-block" className="counter-block">
           <div className="counter-block counter-block__adults">
             <span className="span_number" id="adult-span"> 0 </span>

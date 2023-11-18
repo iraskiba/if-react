@@ -18,11 +18,10 @@ export const App = () => {
       </>
       <MyProvider value={{city:'city'}}>
         <TopSection />
-
-        <AvailableHotels  />
-      </MyProvider>
+        <AvailableHotels />
       <Title/>
    <Contentbox/>
+      </MyProvider>
 </div>
   );
 }
