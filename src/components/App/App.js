@@ -4,23 +4,24 @@ import {Contentbox} from "../Contentbox";
 import {Title} from "../Title";
 import {Sprite} from "../Sprite";
 import {TopSection} from "../TopSection";
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {AvailableHotels} from "../AvailableHotels";
-
+import {MyProvider} from "../Context/MyProvider";
 
 
 export const App = () => {
-  const [city, setCity] = useState([])
 
   return (
     <div>
       <>
         <Sprite/>
       </>
-      <TopSection setCity={setCity}/>
-      <AvailableHotels  city={city}/>
+      <MyProvider value={{city:'city'}}>
+        <TopSection />
+        <AvailableHotels />
       <Title/>
    <Contentbox/>
+      </MyProvider>
 </div>
   );
 }
