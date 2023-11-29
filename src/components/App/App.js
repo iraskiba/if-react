@@ -4,12 +4,14 @@ import {Contentbox} from "../Contentbox";
 import {Title} from "../Title";
 import {Sprite} from "../Sprite";
 import {TopSection} from "../TopSection";
-import React, {useContext, useState} from "react";
+import React, {useContext, useReducer, useRef, useState} from "react";
 import {AvailableHotels} from "../AvailableHotels";
 import {MyProvider} from "../Context/MyProvider";
 
 
+
 export const App = () => {
+
 
   return (
     <div>

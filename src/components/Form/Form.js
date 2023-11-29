@@ -6,6 +6,7 @@ import {useContext, useState} from "react";
 import MyContext  from '../Context/MyContext';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import {Dropdown} from "../Dropdown";
 
 
 export const Form = ()=> {
@@ -26,14 +27,10 @@ export const Form = ()=> {
     event.preventDefault();
     GetHotels(inputCity)
   }
-
   return (
     <div className="form-section">
       <form onSubmit={handleClick}>
         <Input onChange={handleChange} htmlFor="city" value={inputCity} name="city" id="city"/>
-
-
-
         <div className="form-section__date-element">
           <label className="form-section__date-element--date__label" htmlFor="date">Check-in — Check-out</label>
           <div className="form-section__date-element--date__form">
@@ -52,11 +49,7 @@ export const Form = ()=> {
               />
           </div>
           </div>
-
-
         </div>
-
-
 
         <div id="counter-block" className="counter-block">
           <div className="counter-block counter-block__adults">
@@ -73,10 +66,10 @@ export const Form = ()=> {
             <label className="_label" htmlFor="rooms-span">Room</label>
           </div>
         </div>
+        <Dropdown/>
         <Btn/>
       </form>
     </div>
   )
-
 }
 
